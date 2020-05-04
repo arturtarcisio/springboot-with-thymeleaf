@@ -1,66 +1,84 @@
 package com.arturtarcisio.springboot.entidades;
 
 import java.io.Serializable;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Instituicao implements Serializable {
-
+public class Aluno implements Serializable{
+	
+	
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	private Long id;
-
-	@Column(length = 30)
-	private String nome;
-
-	@Column(length = 100)
-	private String endereco;
 	
-	@OneToMany(mappedBy = "instituicao")
-	private Set<Aluno> alunos;
+	@Column(length = 50)
+	private String nome;
+	
+	@Column(precision = 0)
+	private int idade;
 
-	public Instituicao() {
-	}
+	@ManyToOne
+	private Instituicao instituicao;
+	
+	
+	public Aluno() {}
 
-	public Instituicao(Long id, String nome, String endereco) {
+
+	public Aluno(Long id, String nome, int idade, Instituicao instituicao) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		this.endereco = endereco;
+		this.idade = idade;
+		this.instituicao = instituicao;
 	}
+
 
 	public Long getId() {
 		return id;
 	}
 
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 
 	public String getNome() {
 		return nome;
 	}
 
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-	public String getEndereco() {
-		return endereco;
+
+	public int getIdade() {
+		return idade;
 	}
 
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
+
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
+
+
+	public Instituicao getInstituicao() {
+		return instituicao;
+	}
+
+
+	public void setInstituicao(Instituicao instituicao) {
+		this.instituicao = instituicao;
+	}
+
 
 	@Override
 	public int hashCode() {
@@ -70,6 +88,7 @@ public class Instituicao implements Serializable {
 		return result;
 	}
 
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -78,7 +97,7 @@ public class Instituicao implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Instituicao other = (Instituicao) obj;
+		Aluno other = (Aluno) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -86,5 +105,6 @@ public class Instituicao implements Serializable {
 			return false;
 		return true;
 	}
-
+	
+	
 }
