@@ -23,7 +23,7 @@
 				<tr th:each="instituicao: ${instituicoes}">
 					<td th:text="${instituicao.nome}"></td>
 					<td th:text="${instituicao.endereco}"></td>
-					<td><a th:href="@{/instituicao/editar/{id}(id=${instituicao.id})}">Editar</a>
+					<td><a th:href="@{/instituicao/editar/{id}(id=${instituicao.id})}">Editar</a> |
 						<a th:href="@{/instituicao/excluir/{id}(id=${instituicao.id})}">Excluir</a>
 					</td>
 				</tr>
