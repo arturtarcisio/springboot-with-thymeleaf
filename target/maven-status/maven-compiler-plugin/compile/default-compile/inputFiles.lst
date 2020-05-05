@@ -1,5 +1,8 @@
+/home/artur/eclipse-workspace/Treinaweb-springboot/src/main/java/com/arturtarcisio/springboot/entidades/Aluno.java
 /home/artur/eclipse-workspace/Treinaweb-springboot/src/main/java/com/arturtarcisio/springboot/repositorios/RepositorioInstituicao.java
 /home/artur/eclipse-workspace/Treinaweb-springboot/src/main/java/com/arturtarcisio/springboot/controllers/HelloController.java
+/home/artur/eclipse-workspace/Treinaweb-springboot/src/main/java/com/arturtarcisio/springboot/repositorios/RepositorioAluno.java
+/home/artur/eclipse-workspace/Treinaweb-springboot/src/main/java/com/arturtarcisio/springboot/controllers/AlunoController.java
 /home/artur/eclipse-workspace/Treinaweb-springboot/src/main/java/com/arturtarcisio/springboot/Application.java
 /home/artur/eclipse-workspace/Treinaweb-springboot/src/main/java/com/arturtarcisio/springboot/controllers/InstituicoesController.java
 /home/artur/eclipse-workspace/Treinaweb-springboot/src/main/java/com/arturtarcisio/springboot/entidades/Instituicao.java
